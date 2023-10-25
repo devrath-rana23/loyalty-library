@@ -1,33 +1,34 @@
-const E = ({
-  handleClick: r = () => {
+import e from "react";
+const L = ({
+  handleClick: n = () => {
   },
-  handleImageLoad: a = () => {
+  handleImageLoad: m = () => {
   },
-  isLoggedIn: n = !1,
-  loyaltyAccount: e,
-  SquareSkeleton: m,
-  isImageLoading: s = !0,
-  classNameOne: t = "",
-  classNameTwo: R = "",
-  classNameThree: g = "",
-  classNameFour: i = ""
-}) => /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("a", { href: "/", onClick: r, className: t }, s && /* @__PURE__ */ React.createElement("div", { className: R }, /* @__PURE__ */ React.createElement(m, null)), n ? /* @__PURE__ */ React.createElement(
+  isLoggedIn: a = !1,
+  loyaltyAccount: r,
+  SquareSkeleton: s,
+  isImageLoading: i = !0,
+  classNameOne: g = "",
+  classNameTwo: E = "",
+  classNameThree: N = "",
+  classNameFour: d = ""
+}) => /* @__PURE__ */ e.createElement(e.Fragment, null, /* @__PURE__ */ e.createElement("a", { href: "/", onClick: n, className: g }, i && /* @__PURE__ */ e.createElement("div", { className: E }, /* @__PURE__ */ e.createElement(s, null)), a ? /* @__PURE__ */ e.createElement(
   "img",
   {
-    src: e == null ? void 0 : e.loggedIn,
+    src: r == null ? void 0 : r.loggedIn,
     alt: "LogIN",
-    className: g,
-    onLoad: a
+    className: N,
+    onLoad: m
   }
-) : /* @__PURE__ */ React.createElement(
+) : /* @__PURE__ */ e.createElement(
   "img",
   {
-    src: e == null ? void 0 : e.nonLoggedIn,
+    src: r == null ? void 0 : r.nonLoggedIn,
     alt: "JoinIN",
-    className: i,
-    onLoad: a
+    className: d,
+    onLoad: m
   }
 )));
 export {
-  E as UnlockRewardLinkWithBanner
+  L as UnlockRewardLinkWithBanner
 };
