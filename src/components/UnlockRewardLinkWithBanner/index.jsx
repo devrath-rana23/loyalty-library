@@ -1,21 +1,15 @@
-import { useState } from "react";
-
 const UnlockRewardLinkWithBanner = ({
   handleClick = () => {},
+  handleImageLoad = () => {},
   isLoggedIn = false,
   loyaltyAccount,
   SquareSkeleton,
+  isImageLoading = true,
   classNameOne = "",
   classNameTwo = "",
   classNameThree = "",
   classNameFour = "",
 }) => {
-  const [isImageLoading, setIsImageLoading] = useState(true);
-
-  const handleImageLoad = () => {
-    setIsImageLoading(false);
-  };
-
   return (
     <>
       <a href="/" onClick={handleClick} className={classNameOne}>
