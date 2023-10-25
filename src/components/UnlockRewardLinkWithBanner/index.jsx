@@ -1,11 +1,14 @@
 import { useState } from "react";
-import css from "./index.module.scss";
 
-const UnlockRewardLinkBanner = ({
+const UnlockRewardLinkWithBanner = ({
   handleClick = () => {},
   isLoggedIn = false,
   loyaltyAccount,
-  SquareSkeleton = <></>,
+  SquareSkeleton,
+  classNameOne = "",
+  classNameTwo = "",
+  classNameThree = "",
+  classNameFour = "",
 }) => {
   const [isImageLoading, setIsImageLoading] = useState(true);
 
@@ -15,9 +18,9 @@ const UnlockRewardLinkBanner = ({
 
   return (
     <>
-      <a href="/" onClick={handleClick} className={css.unlockRewards}>
+      <a href="/" onClick={handleClick} className={classNameOne}>
         {isImageLoading && (
-          <div className={css.mainBox}>
+          <div className={classNameTwo}>
             <SquareSkeleton />
           </div>
         )}
@@ -25,14 +28,14 @@ const UnlockRewardLinkBanner = ({
           <img
             src={loyaltyAccount?.loggedIn}
             alt="LogIN"
-            className={isImageLoading ? css.imgLoading : ""}
+            className={classNameThree}
             onLoad={handleImageLoad}
           />
         ) : (
           <img
             src={loyaltyAccount?.nonLoggedIn}
             alt="JoinIN"
-            className={isImageLoading ? css.imgLoading : ""}
+            className={classNameFour}
             onLoad={handleImageLoad}
           />
         )}
@@ -41,4 +44,4 @@ const UnlockRewardLinkBanner = ({
   );
 };
 
-export default UnlockRewardLinkBanner;
+export default UnlockRewardLinkWithBanner;
